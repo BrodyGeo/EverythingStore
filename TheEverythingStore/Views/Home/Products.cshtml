@@ -1,0 +1,16 @@
+﻿@model IEnumerable<TheEverythingStore.Models.Product>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Products";
+}
+
+<h2>@ViewBag.Title.</h2>
+
+<ul>
+    @foreach (var p in Model)
+    {
+        <li>@Html.ActionLink(p.Name, "ViewProduct", "Home", new { ProductName = p.Name}, null)</li>
+    }
+</ul>
+
