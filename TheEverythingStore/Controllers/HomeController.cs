@@ -9,6 +9,10 @@ namespace TheEverythingStore.Controllers
 {
     public class HomeController : Controller
     {
+        /* Database Connection */
+        private DbModel DbConnection = new DbModel();
+
+
         public ActionResult Index()
         {
             return View();
@@ -30,7 +34,7 @@ namespace TheEverythingStore.Controllers
 
         public ActionResult Products()
         {
-            /* old untyped ViewBag Code
+            /* Old untyped ViewBag Code
             var products = new List<string>();
 
             // create mock products
@@ -42,6 +46,7 @@ namespace TheEverythingStore.Controllers
             // pass mock products to the view for display
             ViewBag.Products = products; */
 
+            /* Internally generated mock product list.
             var products = new List<Product>();
 
             for (int i = 1; i <= 10; i++)
@@ -50,8 +55,12 @@ namespace TheEverythingStore.Controllers
                 product.Name = "Product " + i.ToString();
                 products.Add(product);
             }
+            */
 
-            // load the view and pass the product list to it
+            /* Use Product Model to retrieve the entire product list from the sql server. */
+            var products = DbConnection.Products.ToList();
+
+            /* load the view and pass the product list to it */
             return View(products);
         }
 
