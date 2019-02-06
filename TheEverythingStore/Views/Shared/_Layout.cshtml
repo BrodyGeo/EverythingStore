@@ -24,7 +24,7 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Products", "Products", "Home")</li>
+                    <li>@Html.ActionLink("Products", "Index", "Products")</li>
                     <li>@Html.ActionLink("Categories", "Index", "Categories")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
@@ -42,5 +42,8 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    <!-- Sorting tables script from <https://kryogenix.org/code/browser/sorttable/> -->
+    <script src="~/Scripts/sorttable.js"></script>
 </body>
 </html>

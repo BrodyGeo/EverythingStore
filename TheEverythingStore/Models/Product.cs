@@ -24,9 +24,13 @@ namespace TheEverythingStore.Models
         [StringLength(8000)]
         public string Description { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Range(0.01, 500000)]
+        [Required]
         public decimal Price { get; set; }
 
         [StringLength(255)]
+        [Display(Name = "Image")]
         public string Photo { get; set; }
 
         public int CategoryId { get; set; }
