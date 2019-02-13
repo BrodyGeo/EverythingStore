@@ -5,3 +5,14 @@
 
 <p>It was developed in Winter 2019 2019 at Gorgian College for COMP2084.</p>
 <p>Bootstrap Superhero theme from <a href="https://bootswatch.com/3/superhero/"</a></p>
+
+
+<p>
+	Admin:
+		Email: admin@gc.ca
+		Password: Abcd123$
+
+	User:
+		Email: customer@gc.ca
+		Password: Abcd123$
+</p>

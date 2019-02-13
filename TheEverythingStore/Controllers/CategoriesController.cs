@@ -10,6 +10,7 @@ using TheEverythingStore.Models;
 
 namespace TheEverythingStore.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class CategoriesController : Controller
     {
         private DbModel db = new DbModel();
