@@ -20,9 +20,9 @@ namespace TheEverythingStore.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Cart>()
-                .Property(e => e.CartId)
-                .IsUnicode(false);
+            //modelBuilder.Entity<Cart>()
+            //    .Property(e => e.CartId)
+            //    .IsUnicode(false);
 
             modelBuilder.Entity<Cart>()
                 .Property(e => e.Price)

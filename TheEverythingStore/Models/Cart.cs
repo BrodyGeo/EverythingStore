@@ -8,14 +8,16 @@ namespace TheEverythingStore.Models
 
     public partial class Cart
     {
-        [StringLength(100)]
-        public string CartId { get; set; }
+        public int CartId { get; set; }
 
         public int ProductId { get; set; }
 
         public int Quantity { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal Price { get; set; }
+
+        public string Username { get; set; }
 
         public virtual Product Product { get; set; }
     }

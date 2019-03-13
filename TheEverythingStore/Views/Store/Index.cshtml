@@ -1,0 +1,22 @@
+﻿@model IEnumerable<TheEverythingStore.Models.Category>
+
+@{
+    ViewBag.Title = "Shop Now";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Browse our Categories</h2>
+
+<section class="container">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-md-6 text-center well">
+            <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+            <a href="/Store/Products/@item.CategoryId">
+                <button class="btn btn-primary">Shop Now</button>
+            </a>
+        </div>
+    }
+
+</section>
